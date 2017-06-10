@@ -2,12 +2,19 @@ const { adBlockDataFileVersion, AdBlockClient, FilterOptions } = require('ad-blo
 const { makeAdBlockClientFromFilePath } = require('ad-block/lib/util');
 const fs = require('fs');
 const adBlocker = new AdBlockClient();
+const path = require('path');
+
 
 const isAd = (url, host) => {
   return adBlocker.matches(url, FilterOptions.noFilterOption, host);
 };
 
-fs.readFile('./data/buffer', function(err, buffer) {
+const filePath = path.resolve(__dirname, 'data/buffer');
+
+fs.readFile(filePath, function(err, buffer) {
+  if (err) {
+    return console.log(err);
+  }
   adBlocker.deserialize(buffer);
 });
 
