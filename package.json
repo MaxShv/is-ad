@@ -4,7 +4,7 @@
   "main": "is-ad.js",
   "description": "Using brave ad block to check if it is an ad",
   "scripts": {
-    "test": "node test.js",
+    "test": "node test.js"
   },
   "author": "Max Shvets",
   "dependencies": {
