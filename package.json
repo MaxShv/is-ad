@@ -1,0 +1,13 @@
+{
+  "name": "is-ad",
+  "version": "1.0.0",
+  "description": "Using brave ad block to check if it is an ad",
+  "scripts": {
+    "test": "node test.js",
+    "postinstall": "node build.js"
+  },
+  "author": "Max Shvets",
+  "dependencies": {
+    "ad-block": "^3.0.3"
+  }
+}

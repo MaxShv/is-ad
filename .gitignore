@@ -1,0 +1,7 @@
+node_modules
+build
+builds
+packages
+compile
+.DS_Store
+*.log
