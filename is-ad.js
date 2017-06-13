@@ -1,5 +1,4 @@
-const { adBlockDataFileVersion, AdBlockClient, FilterOptions } = require('ad-block');
-const { makeAdBlockClientFromFilePath } = require('ad-block/lib/util');
+const { AdBlockClient, FilterOptions } = require('ad-block');
 const fs = require('fs');
 const adBlocker = new AdBlockClient();
 const path = require('path');
