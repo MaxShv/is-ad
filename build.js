@@ -4,11 +4,12 @@ const axios = require('axios');
 
 
 
-function updateEasyList() {
+function updateEasyList(path) {
+  path = path || './data';
   axios.get('https://easylist.to/easylist/easylist.txt')
     .then(function (res) {
-      buildBuffer(res.data);
-      fs.writeFile('./data/easylist.txt', res.data, function (err) {
+      buildBuffer(res.data, path);
+      fs.writeFile(path + '/easylist.txt', res.data, function (err) {
         if (err) return console.log(err);
         console.log('saved easylist.txt');
       });
@@ -18,11 +19,11 @@ function updateEasyList() {
     });
 }
 
-function buildBuffer(filterRuleData) {
+function buildBuffer(filterRuleData, path) {
   const client = new AdBlockClient();
   client.parse(filterRuleData);
   const buffer = client.serialize();
-  fs.writeFile('./data/buffer', buffer, function (err) {
+  fs.writeFile(path + '/buffer', buffer, function (err) {
     if (err) return console.log(err);
     console.log('easlist.txt buffer was saved');
   });

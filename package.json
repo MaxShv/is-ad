@@ -1,6 +1,6 @@
 {
   "name": "is-ad",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "is-ad.js",
   "description": "Check if a given url is an ad",
   "scripts": {
