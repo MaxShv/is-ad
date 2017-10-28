@@ -2,12 +2,13 @@
   "name": "is-ad",
   "version": "1.0.0",
   "main": "is-ad.js",
-  "description": "Using brave ad block to check if it is an ad",
+  "description": "Check if a given url is an ad",
   "scripts": {
     "test": "node test.js"
   },
   "author": "Max Shvets",
   "dependencies": {
-    "ad-block": "^3.0.3"
+    "ad-block": "^3.0.3",
+    "axios": "^0.17.0"
   }
 }
