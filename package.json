@@ -8,7 +8,7 @@
   },
   "author": "Max Shvets",
   "dependencies": {
-    "ad-block": "^3.0.3",
+    "ad-block": "^4.1.1",
     "axios": "^0.17.0"
   }
 }
